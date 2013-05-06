@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical|center_horizontal"
+    android:background="@drawable/bkg_home2x"
+    tools:context=".Home" >
+
+    <ImageButton
+        android:id="@+id/btn_howto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:onClick="howToPlay"
+        android:background="@drawable/btn_howto2x"
+        android:contentDescription="@string/HowTo"
+        android:src="@drawable/btn_howto2x" />
+
+    <ImageButton
+        android:id="@+id/btn_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_howto"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_play2x"
+        android:contentDescription="@string/PlayGame"
+        android:onClick="startGame"
+        android:src="@drawable/btn_play2x" />
+
+    <ImageButton
+        android:id="@+id/btn_about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_howto"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_about2x"
+        android:contentDescription="@string/About"
+        android:onClick="aboutScreen"
+        android:src="@drawable/btn_about2x" />
+
+</RelativeLayout>

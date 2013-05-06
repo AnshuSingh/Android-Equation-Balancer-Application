@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="tblr.equationbalancer"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-sdk
+        android:targetSdkVersion="15"
+        android:minSdkVersion="8" />
+
+    <application
+       android:icon="@drawable/icon"
+        android:label="@string/mainTitle"
+ 	>
+ 	
+         <activity
+            android:name=".Splash"
+            android:label="Equation Balancer" 
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+    	    android:screenOrientation="landscape" 
+    	    android:configChanges="orientation|keyboardHidden"
+           >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Home"
+    	    android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+    	    android:screenOrientation="landscape" 
+    	    android:configChanges="orientation|keyboardHidden">
+        </activity>
+         <activity android:name=".MainGame"
+    	    android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+    	    android:screenOrientation="landscape" 
+    	    android:configChanges="orientation|keyboardHidden"></activity>
+         <activity android:name=".NumKeyPad"
+    	    android:theme="@android:style/Theme.Dialog"
+    	    android:screenOrientation="landscape" 
+    	    android:configChanges="orientation|keyboardHidden"></activity>
+          <activity android:name=".Done"
+    	    android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+    	    android:screenOrientation="landscape" 
+    	    android:configChanges="orientation|keyboardHidden"></activity>
+          <activity android:name=".HowToPlay"
+    	    android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+    	    android:screenOrientation="landscape" 
+    	    android:configChanges="orientation|keyboardHidden"></activity>
+           <activity android:name=".AboutGame"
+    	    android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+    	    android:screenOrientation="landscape" 
+    	    android:configChanges="orientation|keyboardHidden"></activity>
+    </application>
+
+</manifest>

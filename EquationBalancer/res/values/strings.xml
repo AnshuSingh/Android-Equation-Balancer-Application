@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="mainTitle">Equation\nBalancer</string>
+    <string name="app_name">EquationBalancer</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="About">About</string>
+    <string name="HowTo">HowToPlay</string>
+    <string name="PlayGame">Play Game</string>
+    
+    <!-- NumKey strings -->
+    <string name="okay">OK</string>
+    <string name="cancel">x</string>
+    <string name="delete">c</string>
+    <string name="zero">0</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="paddingspace">   </string>
+    <string name="instruction">Enter a Number</string>
+    
+    <!-- End Screen -->
+    <string name="successMsg">You Did It!</string>
+    <string name="solvedX">x =</string>
+    
+    <!-- Main Game Help -->
+    <string name="oops">Oops!</string>
+    <string name="subtractX">In this equation you should simplify by subtracting X from each side.</string>
+    <string name="addX">In this equation you should simplify by adding X from each side.</string>
+    
+    <!-- How To Play Headers -->
+    <string name="centerHeader"> Welcome!</string>
+    <string name="equationHeader"> Your Equation</string>
+    <string name="balancerHeader"> Balancing Scale</string>
+    <string name="xButtonHeader"> Add or Subtract Blocks</string>
+    <string name="statusHeader"> Ready To Solve</string>
+    <string name="hintHeader"> New Equation</string>
+    <string name="deleteHeader"> Add too many Blocks?</string>
+    <string name="goHomeHeader"> Stuck?</string>
+    
+     <!-- How To Play -->
+    <string name="sampleEq">4x + 3 = 5x - 2</string>
+    <string name="centerCue">\nWelcome to Equation Balancer! We\'re going to show you how to balance and solve equations!
+        \n\nTo contine, click \"continue\" below.
+        </string>
+    <string name="equationCue">Here you can see the equation that you will be solving! It will be different each time!</string>
+    <string name="balancerCue">Here is your equation balancing scale. Each side of the scale represents each side of the equation separated by the equal sign.</string>
+    <string name="xButtonCue">Use these buttons to add or subtract X\'s, or numbers from each side of the scale.</string>
+    <string name="statusCue">Once you\'ve built the equation shown, \"Ready to Solve\" will light up. Press \"Ready to Solve\" to lock in your answer.</string>
+    <string name="arrowCue">You can use these arrows to look back at earliersteps of the equation.</string>
+    <string name="goHomeCue">If you ever get stuck and want a new equation tap the home button. You will get a new equation next time.</string>
+    <string name="deleteCue">If you accidentally add too many blocks, long press on the block you want to remove and press the \'X\' button.</string>
+    <string name="hintCue">As you change the equation, your new equation will be shown here.</string>
+
+</resources>
