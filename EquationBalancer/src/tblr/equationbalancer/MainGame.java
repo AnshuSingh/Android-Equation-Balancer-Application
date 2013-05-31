@@ -349,7 +349,7 @@ public class MainGame  extends Activity implements NumKeyPadListener{
 			done.putExtra("answer",strAns);
 			finish();
 			overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-	    	startActivity(done);
+	    		startActivity(done);
 		}
 	}
 	
@@ -432,39 +432,39 @@ public class MainGame  extends Activity implements NumKeyPadListener{
 		AnimatorSet animSetXY = new AnimatorSet();
 		switch (state){
 			case (PLUS + LEFT + BOTTOM) :
-					btn = getXButton(PLUS);
-					animX = ObjectAnimator.ofFloat(btn, "x", leftGreenX.getX(), left_grid.getX()+position*blkWidth);
-				    animY = ObjectAnimator.ofFloat(btn, "y", leftGreenX.getY(),left_grid.getY()- blkHeight);
-					gridObj.add(new GridObject(btn,BOTTOM,position,null,LEFT,IMGBUTTON));
-					updateHints(LEFT+BOTTOM+IMGBUTTON,solvingEquation.setLhsCoefficient(solvingEquation.getLhsCoefficient() + 1));
-					 animSetXY.addListener(new MyAnimator(PLUS + BOTTOM));
-					break;
+				btn = getXButton(PLUS);
+				animX = ObjectAnimator.ofFloat(btn, "x", leftGreenX.getX(), left_grid.getX()+position*blkWidth);
+				animY = ObjectAnimator.ofFloat(btn, "y", leftGreenX.getY(),left_grid.getY()- blkHeight);
+				gridObj.add(new GridObject(btn,BOTTOM,position,null,LEFT,IMGBUTTON));
+				updateHints(LEFT+BOTTOM+IMGBUTTON,solvingEquation.setLhsCoefficient(solvingEquation.getLhsCoefficient() + 1));
+				animSetXY.addListener(new MyAnimator(PLUS + BOTTOM));
+				break;
 			case (PLUS + RIGHT + BOTTOM):
-					btn = getXButton(PLUS);
-					animX = ObjectAnimator.ofFloat(btn, "x", rightGreenX.getX(), right_grid.getX()+position*blkWidth);
-				    animY = ObjectAnimator.ofFloat(btn, "y", rightGreenX.getY(),right_grid.getY()-blkHeight);
-				    gridObj.add(new GridObject(btn,BOTTOM,position,null,RIGHT,IMGBUTTON));
-				    updateHints( RIGHT+BOTTOM+IMGBUTTON,solvingEquation.setRhsCoefficient(solvingEquation.getRhsCoefficient() + 1));
-				    animSetXY.addListener(new MyAnimator(PLUS + BOTTOM));
+				btn = getXButton(PLUS);
+				animX = ObjectAnimator.ofFloat(btn, "x", rightGreenX.getX(), right_grid.getX()+position*blkWidth);
+			    	animY = ObjectAnimator.ofFloat(btn, "y", rightGreenX.getY(),right_grid.getY()-blkHeight);
+			    	gridObj.add(new GridObject(btn,BOTTOM,position,null,RIGHT,IMGBUTTON));
+			    	updateHints( RIGHT+BOTTOM+IMGBUTTON,solvingEquation.setRhsCoefficient(solvingEquation.getRhsCoefficient() + 1));
+			    	animSetXY.addListener(new MyAnimator(PLUS + BOTTOM));
 				break;
 			case (PLUS + LEFT + TOP):
-				 	btn = getXButton(MINUS);
-					animX = ObjectAnimator.ofFloat(btn, "x", leftRedX.getX(), left_grid.getX()+position*blkWidth);
-				    animY = ObjectAnimator.ofFloat(btn, "y", leftRedX.getY(),left_grid.getY()- 2*blkHeight);
-					gridObj.add(new GridObject(btn,TOP,position,null,LEFT,IMGBUTTON));
-					updateHints(LEFT + TOP+IMGBUTTON,simplifyEquation.setLhsCoefficient(simplifyEquation.getLhsCoefficient() + 1));
-					trackLhsCoeff++;
-					 animSetXY.addListener(new MyAnimator(PLUS + TOP));
-					break;
+			 	btn = getXButton(MINUS);
+				animX = ObjectAnimator.ofFloat(btn, "x", leftRedX.getX(), left_grid.getX()+position*blkWidth);
+			   	animY = ObjectAnimator.ofFloat(btn, "y", leftRedX.getY(),left_grid.getY()- 2*blkHeight);
+				gridObj.add(new GridObject(btn,TOP,position,null,LEFT,IMGBUTTON));
+				updateHints(LEFT + TOP+IMGBUTTON,simplifyEquation.setLhsCoefficient(simplifyEquation.getLhsCoefficient() + 1));
+				trackLhsCoeff++;
+				animSetXY.addListener(new MyAnimator(PLUS + TOP));
+				break;
 			case (PLUS + RIGHT + TOP):
-					btn = getXButton(MINUS);
-					animX = ObjectAnimator.ofFloat(btn, "x", rightRedX.getX(), right_grid.getX()+position*blkWidth);
-				    animY = ObjectAnimator.ofFloat(btn, "y", rightRedX.getY(),right_grid.getY()-2*blkHeight);
-					gridObj.add(new GridObject(btn,TOP,position,null,RIGHT,IMGBUTTON));
-					updateHints(RIGHT + TOP+IMGBUTTON,simplifyEquation.setRhsCoefficient(simplifyEquation.getRhsCoefficient() + 1));
-					trackRhsCoeff++;
-					animSetXY.addListener(new MyAnimator(PLUS + TOP));
-					break;
+				btn = getXButton(MINUS);
+				animX = ObjectAnimator.ofFloat(btn, "x", rightRedX.getX(), right_grid.getX()+position*blkWidth);
+			    	animY = ObjectAnimator.ofFloat(btn, "y", rightRedX.getY(),right_grid.getY()-2*blkHeight);
+				gridObj.add(new GridObject(btn,TOP,position,null,RIGHT,IMGBUTTON));
+				updateHints(RIGHT + TOP+IMGBUTTON,simplifyEquation.setRhsCoefficient(simplifyEquation.getRhsCoefficient() + 1));
+				trackRhsCoeff++;
+				animSetXY.addListener(new MyAnimator(PLUS + TOP));
+				break;
 		}
 		
 	    animSetXY.playTogether(animX, animY);
@@ -508,7 +508,7 @@ public class MainGame  extends Activity implements NumKeyPadListener{
 	
 	private void showNumPad(Boolean isNegative){
 		 Bundle args = new Bundle();
-	     args.putBoolean("isNegative",isNegative);
+	     	 args.putBoolean("isNegative",isNegative);
 		 DialogFragment numKeyPad = new NumKeyPad();
 		 numKeyPad.setArguments(args);
 		 numKeyPad.show(getFragmentManager(), "NumKeyPad");
@@ -610,7 +610,7 @@ public class MainGame  extends Activity implements NumKeyPadListener{
 				lhsCoeff.setText("x");
 			else
 				lhsCoeff.setText(value+"x");
-		lhsCoeff.animate();
+			lhsCoeff.animate();
 			clearIfZero (lhsCoeff,value);
 			break;
 		case (RIGHT+TOP+TEXT):
@@ -618,32 +618,32 @@ public class MainGame  extends Activity implements NumKeyPadListener{
 				hintRhsConst.setText("+"+value);
 			else
 				hintRhsConst.setText(value+" ");
-		hintRhsConst.animate();
-		clearIfZero (hintRhsConst,value);
+			hintRhsConst.animate();
+			clearIfZero (hintRhsConst,value);
 			break;
 		case (RIGHT+TOP+IMGBUTTON):
 			if (value == 1)
 				hintRhsCoeff.setText("-x");
 			else
 				hintRhsCoeff.setText("-"+value+"x");
-		hintRhsCoeff.animate();	
-		clearIfZero (hintRhsCoeff,value);
+			hintRhsCoeff.animate();	
+			clearIfZero (hintRhsCoeff,value);
 			break;
 		case (RIGHT+BOTTOM+TEXT):
 			if (value > 0)
 				rhsConst.setText(" + "+value);
 			else
 				rhsConst.setText(" - "+(-value)+" ");
-		rhsConst.animate();	
-		clearIfZero (rhsConst,value);
+			rhsConst.animate();	
+			clearIfZero (rhsConst,value);
 			break;
 		case (RIGHT+BOTTOM+IMGBUTTON):
 			if (value == 1)
 				rhsCoeff.setText("x");
 			else
 				rhsCoeff.setText(value+"x");
-		rhsCoeff.animate();	
-		clearIfZero (rhsCoeff,value);
+			rhsCoeff.animate();	
+			clearIfZero (rhsCoeff,value);
 			break;
 		}
 		
@@ -656,7 +656,7 @@ public class MainGame  extends Activity implements NumKeyPadListener{
 		ObjectAnimator animY = ObjectAnimator.ofFloat(gObj.getImgBtn(), "y", y,(y-20), y+metrics.heightPixels); 
 		animY.setDuration(1500);
 		animY.start();
-	    soundPool.play(deleteSound, 1.0f, 1.0f, 0, 0, 1.0f);
+	    	soundPool.play(deleteSound, 1.0f, 1.0f, 0, 0, 1.0f);
 		gridObj.remove(gObj);
 	}
 
@@ -720,7 +720,7 @@ public class MainGame  extends Activity implements NumKeyPadListener{
 						textWidget.setX(left_grid.getX()+position*blkWidth);
 						textWidget.setY(height);
 						relLayout.addView(textWidget);
-					    gObj.addTextViewObj(null, row,position, textWidget, LEFT, TEXT);
+					    	gObj.addTextViewObj(null, row,position, textWidget, LEFT, TEXT);
 						gridObj.add(gObj);
 					}
 				 }
@@ -742,7 +742,7 @@ public class MainGame  extends Activity implements NumKeyPadListener{
 						textWidget.setX(right_grid.getX()+position*blkWidth);
 						textWidget.setY(height);
 						relLayout.addView(textWidget);
-					    gObj.addTextViewObj(null, row,position, textWidget, RIGHT, TEXT);
+					    	gObj.addTextViewObj(null, row,position, textWidget, RIGHT, TEXT);
 						gridObj.add(gObj);
 					}
 				 }
@@ -763,9 +763,9 @@ public class MainGame  extends Activity implements NumKeyPadListener{
 	private void setNumPosition(int side){
 		if (!isReadyToSolve){
 			if (side==LEFT){
-					lnumcol=findNextAvailablePosition(LEFT+PLUS+BOTTOM);
-					updateHints(LEFT+BOTTOM+TEXT, leftBottomSum);
-					bottomLeftNumText = setNumText(leftBottomSum,bottomLeftNumText, lnumcol, bottomLeftNumObj, LEFT, solvingEquation );
+				lnumcol=findNextAvailablePosition(LEFT+PLUS+BOTTOM);
+				updateHints(LEFT+BOTTOM+TEXT, leftBottomSum);
+				bottomLeftNumText = setNumText(leftBottomSum,bottomLeftNumText, lnumcol, bottomLeftNumObj, LEFT, solvingEquation );
 			}
 			else {
 				rnumcol=findNextAvailablePosition(RIGHT+PLUS+BOTTOM);
@@ -775,10 +775,10 @@ public class MainGame  extends Activity implements NumKeyPadListener{
 		}
 		else{
 			if (side==LEFT){
-					row = TOP;
-					updateHints(LEFT+TOP+TEXT, leftTopSum);
-					topLeftNumText = setNumText(leftTopSum,topLeftNumText, lnumcol, topLeftNumObj, LEFT, simplifyEquation);
-					
+				row = TOP;
+				updateHints(LEFT+TOP+TEXT, leftTopSum);
+				topLeftNumText = setNumText(leftTopSum,topLeftNumText, lnumcol, topLeftNumObj, LEFT, simplifyEquation);
+				
 			 }
 			else {
 				row = TOP;
@@ -989,37 +989,37 @@ public class MainGame  extends Activity implements NumKeyPadListener{
 					if (gObj.getImgBtn() == btn){
 						switch ((gObj.getSide()) + row){
 							case (LEFT + TOP):
-								updateHints(LEFT + TOP+IMGBUTTON,simplifyEquation.setLhsCoefficient(simplifyEquation
+							    updateHints(LEFT + TOP+IMGBUTTON,simplifyEquation.setLhsCoefficient(simplifyEquation
 										.getLhsCoefficient() - 1));
-								trackLhsCoeff--;
+							    trackLhsCoeff--;
 							    findNextAvailablePosition(LEFT+TOP+MINUS);
 							    state = LEFT + TOP;
 							    isReadyToBeSimplified();
 							    break;
 							case (LEFT + BOTTOM):
-								updateHints(LEFT + BOTTOM+IMGBUTTON,solvingEquation.setLhsCoefficient(solvingEquation
+							    updateHints(LEFT + BOTTOM+IMGBUTTON,solvingEquation.setLhsCoefficient(solvingEquation
 										.getLhsCoefficient() - 1));
 							    findNextAvailablePosition(LEFT + BOTTOM+MINUS);
 							    state = LEFT + BOTTOM;
 							    checkReadyToSolve();
-								break;
+							    break;
 							case (RIGHT + TOP):
-								updateHints(RIGHT + TOP+IMGBUTTON,simplifyEquation.setRhsCoefficient(simplifyEquation
+							    updateHints(RIGHT + TOP+IMGBUTTON,simplifyEquation.setRhsCoefficient(simplifyEquation
 										.getRhsCoefficient() - 1));
-								trackRhsCoeff--;
+							    trackRhsCoeff--;
 							    findNextAvailablePosition(RIGHT+TOP+MINUS);
 							    state = RIGHT + TOP;
 							    isReadyToBeSimplified();
-								break;
+							    break;
 							case (RIGHT + BOTTOM):
-								updateHints(RIGHT + BOTTOM+IMGBUTTON,solvingEquation.setRhsCoefficient(solvingEquation
+							    updateHints(RIGHT + BOTTOM+IMGBUTTON,solvingEquation.setRhsCoefficient(solvingEquation
 										.getRhsCoefficient() - 1));
 							    findNextAvailablePosition(RIGHT+BOTTOM+MINUS);
 							    state = RIGHT + BOTTOM;
 							    checkReadyToSolve();
-								break;
+							    break;
 						}
-						slide(state,gObj.getCol());
+					    slide(state,gObj.getCol());
 					    relLayout.removeView(btn);
 					    relLayout.removeView(del);
 					    gridObj.remove(gObj);
